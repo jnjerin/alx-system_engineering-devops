@@ -1,0 +1,2 @@
+#!/bin/bash
+truncate -R -s 0 ./*.js 
