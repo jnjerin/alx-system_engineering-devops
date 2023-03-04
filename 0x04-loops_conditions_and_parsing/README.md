@@ -39,7 +39,10 @@ This directory contains files created in response to tasks set in ALX student pr
 
 #### Task 8: [8-for_ls]
 
-* Write a Bash script that displays
+* Write a Bash script that displays: 
+  * The content of the current directory
+  * In a list format
+  * Where only the part of the name after the first dash is displayed 
 
 #### Task 9: [9-to_file_or_not_to_file]
 
