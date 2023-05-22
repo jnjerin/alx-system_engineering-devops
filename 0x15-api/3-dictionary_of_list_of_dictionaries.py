@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Request employee ID from API
+"""Request employee ID from API. Extending the Python script to export data in the JSON format.
 """
 
 from json import dump
