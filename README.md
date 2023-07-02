@@ -13,5 +13,6 @@ This serves as an introduction to advanced concepts that teach you to use the sh
 | [0x05-processes_and_signals](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x05-processes_and_signals) | Processes and Signals |
 | [0x06-regular_expressions](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x06-regular_expressions) | Regular expressions in Ruby |
 | [0x07-networking_basics](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x07-networking_basics) | Networking basics|
+| [0x08-networking_basics_2](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x08-networking_basics_2) | Networking basics part 2|
 | [0x09-web_infrastructure_design](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design) | LAMP stacks ss|
 
