@@ -15,4 +15,5 @@ This serves as an introduction to advanced concepts that teach you to use the sh
 | [0x07-networking_basics](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x07-networking_basics) | Networking basics|
 | [0x08-networking_basics_2](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x08-networking_basics_2) | Networking basics part 2|
 | [0x09-web_infrastructure_design](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design) | LAMP stacks ss|
-| [0x10-https_ssl](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x10-https_ssl) | The concept of securing website traffic.|
+| [0x10-https_ssl](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x10-https_ssl) | The concept of securing website traffic|
+| [0x12-web_stack_debugging_2](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x12-web_stack_debugging_2%20) | Web stack debugging part 2 |
