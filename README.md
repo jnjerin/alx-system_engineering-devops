@@ -23,4 +23,5 @@ This serves as an introduction to advanced concepts that teach you to use the sh
 | [0x16-api_advanced](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x16-api_advanced%20) | Advanced APIs |
 | [0x17-web_stack_debugging_3](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x17-web_stack_debugging_3%20) | Web stack debugging and automation with Puppet |
 | [0x0A-configuration_management](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0A-configuration_management) | Configuration management with puppet |
-| [0x0B-ssh](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0B-ssh) |SSH |
+| [0x0B-ssh](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0B-ssh) | SSH |
+| [0x0C-web_server](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0C-web_server) | Introduction to web server basics |
