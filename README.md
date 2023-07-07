@@ -28,4 +28,5 @@ This serves as an introduction to advanced concepts that teach you to use the sh
 | [0x0D-web_stack_debugging_0](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0D-web_stack_debugging_0) | Introduction to debugging web servers |
 | [0x0E-web_stack_debugging_1](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0E-web_stack_debugging_1) | Web stack debugging |
 | [0x0F-load_balancer](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x0F-load_balancer) |Load balancer |
+| [0x1A-application_server](https://github.com/jnjerin/alx-system_engineering-devops/tree/main/0x1A-application_server%20) |Application server |
 
