@@ -1,8 +1,11 @@
 #!/bin/bash
 
-#Write a Bash script that displays Best School 10 times
-# Loop 10 times
-for ((i=0; i<10; i++))
+# Initialize counter
+count=0
+
+# Use while loop to display "Best School" 10 times
+while [ $count -lt 10 ]
 do
     echo "Best School"
+    ((count++))
 done
