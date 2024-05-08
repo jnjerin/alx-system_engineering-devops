@@ -1,10 +1,15 @@
 file { '~/.ssh/config':
-  ensure  => present,
-  mode    => '0600',
-  content => '
-    Host 52.3.241.110
-            IdentityFile ~/.ssh/school
-            PreferredAuthentications publickey
-            PasswordAuthentication no
-  ',
+  ensure => present,
+}
+
+file_line { 'Turn off passwd auth':
+  path    => '~/.ssh/config',
+  line    => 'PasswordAuthentication no',
+  match   => '^#?PasswordAuthentication',
+}
+
+file_line { 'Declare identity file':
+  path    => '~/.ssh/config',
+  line    => 'IdentityFile ~/.ssh/school',
+  match   => '^#?IdentityFile',
 }
