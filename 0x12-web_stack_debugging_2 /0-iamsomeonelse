@@ -1,3 +1,12 @@
 #!/usr/bin/env bash
-# Run command as given user
-sudo -u "$1" whoami
+# Check if the script received an argument
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <username>"
+    exit 1
+fi
+
+# Get the username from the argument
+USER=$1
+
+# Execute the whoami command as the specified user
+su -c "whoami" "$USER"
