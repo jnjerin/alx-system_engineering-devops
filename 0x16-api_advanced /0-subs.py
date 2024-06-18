@@ -4,24 +4,39 @@ Function that queries the Reddit API and returns
 the number of subscribers for a given subreddit.
 """
 import requests
-import sys
 
 
 def number_of_subscribers(subreddit):
-    """ Queries to Reddit API """
-    u_agent = 'Mozilla/5.0'
+    """Retrieves the number of subscribers for a subreddit.
 
-    headers = {
-        'User-Agent': u_agent
-    }
+    Args:
+        subreddit: The name of the subreddit to query.
 
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    res = requests.get(url, headers=headers, allow_redirects=False)
-    if res.status_code != 200:
+    Returns:
+        The number of subscribers (integer) or 0 if an error occurs or the 
+        subreddit is invalid.
+    """
+
+    url = f"https://reddit.com/r/{subreddit}/about.json"
+    user_agent = "reddit_user"  # Custom User-Agent
+
+    headers = {"User-Agent": user_agent}
+
+    try:
+        response = requests.get(url, headers=headers, allow_redirects=False)
+        response.raise_for_status()  # Raise exception for non-2xx status codes
+
+        data = response.json()
+        return data.get("data", {}).get("subscribers", 0)  # Handle potential missing keys
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error getting subscriber count: {e}")
         return 0
-    dic = res.json()
-    if 'data' not in dic:
-        return 0
-    if 'subscribers' not in dic.get('data'):
-        return 0
-    return res.json()['data']['subscribers']
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Please pass an argument for the subreddit to search.")
+    else:
+        subscribers = number_of_subscribers(sys.argv[1])
+        print(subscribers)
