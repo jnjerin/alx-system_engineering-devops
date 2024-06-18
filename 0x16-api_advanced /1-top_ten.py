@@ -4,24 +4,43 @@
  posts listed for a given subreddit.
 '''
 import requests
-
-
+import json
+import sys
 def top_ten(subreddit):
-    '''
-    Top 10 posts  in subreddit
-    '''
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    user_agent = 'reddit_user'
+    """
+    Retrieves the titles of the top 10 hot posts in a subreddit.
 
-    headers = {'User-Agent': user_agent}
+    Args:
+        subreddit: The name of the subreddit to query.
 
-    req = requests.get(url, headers=headers, allow_redirects=False)
+    Returns:
+        None if an error occurs, otherwise prints titles of the top 10 posts.
+    """
 
-    if req.status_code != 200:
-        print('None')
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    user_agent = "reddit_user"
+
+    headers = {"User-Agent": user_agent}
+
+    response = requests.get(url, headers=headers, allow_redirects=False)
+
+    if response.status_code != 200:
+        print("None")
+        return
+
+    try:
+        data = response.json()
+        children = data.get("data", {}).get("children", [])  # Handle potential missing keys
+
+        for post in children[:10]:
+            print(post["data"]["title"])
+
+    except json.JSONDecodeError:
+        print("Error: Invalid JSON response")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Please provide a subreddit name as an argument.")
     else:
-        data = req.json()['data']
-        post_list = data['children']
-
-        for posts in post_list[0:10]:
-            print(posts['data']['title'])
+        top_ten(sys.argv[1])
